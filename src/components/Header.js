@@ -7,8 +7,8 @@ const Header = () => {
   return (
     <div className='Header'>
       <img src={notes} alt='Logo' className='logo'></img>
-      <h1>String Theory</h1>
-      <button className='cart'>
+      <h1 className='store__name'>String Theory</h1>
+      <button type='button' className='cart'>
         <img src={emptyCart} alt='Shopping cart'></img>
       </button>
     </div>
