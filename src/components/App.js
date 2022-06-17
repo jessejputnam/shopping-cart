@@ -1,14 +1,20 @@
 import { Routes, Route } from "react-router-dom";
 
 import Header from "./Header";
+import Cart from "./Cart";
 import Home from "./Home";
 
 import "../styles/App.css";
 
 function App() {
+  const handleCartBtn = () => {
+    document.querySelector(".Cart").classList.toggle("Cart--hidden");
+  };
+
   return (
     <div className='App'>
-      <Header />
+      <Header cartClick={handleCartBtn} />
+      <Cart />
       <Routes>
         <Route path='/' element={<Home />}></Route>
       </Routes>

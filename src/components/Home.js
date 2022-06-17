@@ -8,7 +8,7 @@ const Home = () => {
         <div className='home__shop__wrapper'>
           <h2 className='store__name store__name--large'>String Theory</h2>
           <p>
-            <span style={{ fontSize: 24 }} class='store__name'>
+            <span style={{ fontSize: 24 }} className='store__name'>
               String Theory&copy;
             </span>{" "}
             is dedicated to all your popular music needs &mdash; as long as they
