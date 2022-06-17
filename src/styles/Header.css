@@ -15,7 +15,7 @@
 }
 
 .Header > h1 {
-  cursor: pointer;
+  cursor: alias;
   transition: color 0.5s;
 }
 
