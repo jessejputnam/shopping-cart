@@ -13,3 +13,14 @@
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
+
+.Header > h1 {
+  cursor: pointer;
+  transition: color 0.5s;
+}
+
+@media (hover: hover) {
+  .Header > h1:hover {
+    color: rgb(238, 161, 161);
+  }
+}

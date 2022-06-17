@@ -2,9 +2,6 @@ import "../styles/Cart.css";
 
 import btnClose from "../images/close-icon.svg";
 
-import removeIcon from "../images/remove-icon.svg";
-import addIcon from "../images/add-icon.svg";
-import bass0 from "../images/products/bass-5string.jpg";
 import bassThumb0 from "../images/products/thumbs/bass-5string-thumb.jpg";
 
 const Item = (props) => {
@@ -20,8 +17,13 @@ const Item = (props) => {
           <p>{props.model}</p>
         </div>
         <div className='item__row--2'>
-          <img height={15} width={15} src={removeIcon} alt='Remove item'></img>
-          <input type='number' min={0} class='input--num'></input>
+          <button type='button' className='btn--count btn--remove'>
+            <strong>&ndash;</strong>
+          </button>
+          <input type='number' min={0} className='input--num'></input>
+          <button type='button' className='btn--count btn--remove'>
+            +
+          </button>
         </div>
       </div>
     </div>
@@ -34,7 +36,7 @@ const Cart = (props) => {
   };
 
   return (
-    <div className='Cart'>
+    <div className='Cart Cart--hidden'>
       <button onClick={closeCart} type='button' className='btn--close'>
         <img src={btnClose} alt='Close'></img>
       </button>

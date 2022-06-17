@@ -1,6 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import "../styles/Home.css";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const goToProducts = () => navigate("/products");
+
   return (
     <div className='Home'>
       <div className='home__img'></div>
@@ -25,7 +30,9 @@ const Home = () => {
             </p>
           </div>
 
-          <button type='button'>Shop Now</button>
+          <button onClick={goToProducts} type='button'>
+            Shop Now
+          </button>
         </div>
       </div>
     </div>
