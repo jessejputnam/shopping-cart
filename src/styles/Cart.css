@@ -6,7 +6,7 @@
   top: 105px;
   height: 88vh;
   width: 400px;
-  background: #efeae3d1;
+  background: #efeae3e6;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border-top-left-radius: 10px;
@@ -14,7 +14,7 @@
   box-shadow: -3px 3px 5px 2px rgba(0, 0, 0, 0.537);
   overflow-x: hidden;
   overflow-y: auto;
-  padding: 15px 25px;
+  padding: 35px 25px 15px;
 
   transition: box-shadow 1s, width 1s, padding-right 1s, padding-left 1s;
 }

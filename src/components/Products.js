@@ -41,14 +41,21 @@ const Product = (props) => {
 
   return (
     <div className='Product'>
-      <img src={images[props.num]} alt={props.model} className='product__img' />
+      <img
+        src={images[props.num]}
+        alt={props.model}
+        className='product__img'
+        style={{ height: 300 }}
+      />
       <div className='product__info__container'>
         <div>
           <h3>{props.model}</h3>
-          <p style={{ fontStyle: "italic" }}>{props.company}</p>
+          <p className='company__name'>{props.company}</p>
         </div>
         <div>
-          <p>${props.price}</p>
+          <p className='product__price'>
+            ${props.price.toLocaleString("en-US")}
+          </p>
           <button type='button'>Add to Cart</button>
         </div>
       </div>
@@ -58,8 +65,8 @@ const Product = (props) => {
 
 const ProductPage = (props) => {
   return (
-    <div type={props.category} className='ProductPage'>
-      <h1>{props.category}</h1>
+    <div category={props.category} className='ProductPage'>
+      <h1>{props.category.toUpperCase()}</h1>
       <div className='product__container'>
         <Product
           category={props.category}
@@ -97,16 +104,35 @@ const ProductPage = (props) => {
 const Products = () => {
   const [page, setPage] = useState("guitars");
 
+  const changeTab = (e) => {
+    setPage(e.target.id);
+  };
+
   return (
     <div className='Products'>
       <div className='product__nav'>
-        <button type='button' className='btn--products' id='guitar'>
+        <button
+          onClick={changeTab}
+          type='button'
+          className='btn--products'
+          id='guitars'
+        >
           Guitars
         </button>
-        <button type='button' className='btn--products' id='mandolin'>
+        <button
+          onClick={changeTab}
+          type='button'
+          className='btn--products'
+          id='mandolins'
+        >
           Mandolins
         </button>
-        <button type='button' className='btn--products' id='bass'>
+        <button
+          onClick={changeTab}
+          type='button'
+          className='btn--products'
+          id='basses'
+        >
           Basses
         </button>
       </div>

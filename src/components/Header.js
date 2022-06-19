@@ -9,6 +9,8 @@ const Header = (props) => {
   const navigate = useNavigate();
   const goToHome = () => navigate("/");
 
+  console.log(props.cartItems);
+
   return (
     <div className='Header'>
       <img src={notes} alt='Logo' className='logo'></img>

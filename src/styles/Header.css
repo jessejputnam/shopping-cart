@@ -1,5 +1,6 @@
 .Header {
   display: flex;
+  z-index: 2;
   justify-content: space-between;
   align-items: center;
   height: 100px;
@@ -8,14 +9,14 @@
   position: sticky;
   top: 0;
   text-align: center;
-  background-color: rgba(198, 192, 192, 0.714);
+  background-color: rgba(198, 192, 192, 0.89);
   box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.512);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
 
 .Header > h1 {
-  cursor: alias;
+  cursor: default;
   transition: color 0.5s;
 }
 
