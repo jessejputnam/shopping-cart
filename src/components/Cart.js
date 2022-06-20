@@ -21,8 +21,6 @@ const allThumbs = {
   )
 };
 
-console.log(allThumbs);
-
 const Item = (props) => {
   return (
     <div className='Item'>
@@ -36,15 +34,13 @@ const Item = (props) => {
           <p>{props.model}</p>
         </div>
         <div className='item__row--2'>
+          <button type='button' className='btn--del'>
+            DEL
+          </button>
           <button type='button' className='btn--count btn--remove'>
             <strong>&ndash;</strong>
           </button>
-          <input
-            type='number'
-            min={0}
-            className='input--count'
-            value={props.count}
-          ></input>
+          <p className='item--count'>{props.count}</p>
           <button type='button' className='btn--count btn--remove'>
             +
           </button>
@@ -59,7 +55,12 @@ const Cart = (props) => {
     document.querySelector(".Cart").classList.add("Cart--hidden");
   };
 
-  console.log(props.cartItems);
+  const cartTotal =
+    props.cartItems.length === 0
+      ? 0
+      : props.cartItems
+          .map((item) => item.price * item.count)
+          .reduce((a, b) => a + b, 0);
 
   const cartItems = props.cartItems.map((item) => (
     <Item
@@ -72,11 +73,6 @@ const Cart = (props) => {
       count={item.count}
     />
   ));
-  // const cartItems = props.cartItems.map((item) =>
-  //   console.log(allThumbs[item.category][item.index])
-  // );
-
-  console.log(cartItems);
 
   return (
     <div className='Cart Cart--hidden'>
@@ -85,14 +81,12 @@ const Cart = (props) => {
       </button>
       <h2>Shopping Cart</h2>
       {cartItems}
-      {/* <Item
-        // src={bassThumb0}
-        alt='5 String Bass'
-        company='Ibanez'
-        model='AEB209C 5-String Acoustic/Electric Bass'
-        price={399.99}
-        count={1}
-      /> */}
+      <p className='total__price'>
+        Total: ${cartTotal.toLocaleString("en-US")}
+      </p>
+      <button className='btn--checkout' type='button'>
+        Checkout
+      </button>
     </div>
   );
 };

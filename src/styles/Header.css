@@ -20,6 +20,18 @@
   transition: color 0.5s;
 }
 
+.cart {
+  position: relative;
+}
+
+.num__items {
+  position: absolute;
+  bottom: 0;
+  right: 3px;
+  color: rgba(128, 128, 128, 0.677);
+  font-size: 0.95rem;
+}
+
 @media (hover: hover) {
   .Header > h1:hover {
     color: rgb(238, 161, 161);

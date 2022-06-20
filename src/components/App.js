@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Header from "./Header";
 import Cart from "./Cart";
@@ -30,24 +30,36 @@ const updateCartData = (cart, value) => {
         count: 1
       }
     ];
-  } else return cart;
+  } else {
+    return [...cart];
+  }
 };
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [cartCount, setCartCount] = useState(0);
 
   const updateCart = (value) => {
     const newCart = updateCartData(cart, value);
     setCart(newCart);
-    console.log(cart);
   };
   const handleCartBtn = () => {
     document.querySelector(".Cart").classList.toggle("Cart--hidden");
   };
 
+  useEffect(() => {
+    let count = 0;
+    cart.forEach((item) => (count += item.count));
+    setCartCount(count);
+  }, [cart]);
+
   return (
     <div className='App'>
-      <Header cartClick={handleCartBtn} cartItems={cart} />
+      <Header
+        cartCount={cartCount}
+        cartClick={handleCartBtn}
+        cartItems={cart}
+      />
       <Cart cartItems={cart} />
       <Routes>
         <Route path='/' element={<Home />}></Route>

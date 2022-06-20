@@ -65,10 +65,35 @@
   justify-content: flex-end;
 }
 
+.btn--del {
+  height: 28px;
+  line-height: 14px;
+  font-size: 14px;
+  color: white;
+  text-shadow: 1px 1px black;
+  border: outset 2px rgba(253, 71, 71, 0.634);
+  margin-right: 10px;
+  box-shadow: none;
+  background: rgba(234, 85, 85, 0.887);
+}
+
+@media (hover: hover) {
+  .btn--del:hover {
+    background: linear-gradient(
+      to bottom right,
+      rgba(255, 0, 0, 0.671),
+      rgba(207, 145, 145, 0.696),
+      rgba(255, 0, 0, 0.609)
+    );
+    box-shadow: none;
+    color: rgb(184, 184, 184);
+  }
+}
+
 .btn--count {
   box-shadow: none;
   background: none;
-  height: 25px;
+  height: 30px;
   line-height: 5px;
   padding: 0;
   margin: -2px 5px 0;
@@ -76,6 +101,31 @@
 
 .btn--count:hover {
   box-shadow: none;
+}
+
+.item--count {
+  background: white;
+  width: 30px;
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 25px;
+  border: solid 1px black;
+  border-radius: 5px;
+}
+
+.total__price {
+  align-self: flex-end;
+  text-align: end;
+  width: 175px;
+  margin: 20px 0;
+  color: rgb(44, 44, 44);
+  font-family: "Gruppo", Arial, Helvetica, sans-serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.766);
+  font-size: 1.5rem;
+}
+
+.btn--checkout {
+  background: rgba(205, 203, 191, 0.704);
 }
 
 .Cart--hidden {

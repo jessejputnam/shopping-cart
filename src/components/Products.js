@@ -15,8 +15,6 @@ const allImgs = {
   mandolins: Object.values(allProductsImgs).filter((x) => x.includes("mando"))
 };
 
-console.log(allImgs);
-
 const info = {
   basses: [
     ["Taylor", "5-String Acoustic Bass", 329.99],
