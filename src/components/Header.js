@@ -2,14 +2,13 @@ import { useNavigate } from "react-router-dom";
 
 import notes from "../images/musical-notes.png";
 import emptyCart from "../images/cart-empty.png";
+import fullCart from "../images/cart-full.png";
 
 import "../styles/Header.css";
 
 const Header = (props) => {
   const navigate = useNavigate();
   const goToHome = () => navigate("/");
-
-  console.log(props.cartItems);
 
   return (
     <div className='Header'>
@@ -18,7 +17,10 @@ const Header = (props) => {
         String Theory
       </h1>
       <button onClick={props.cartClick} type='button' className='cart'>
-        <img src={emptyCart} alt='Shopping cart'></img>
+        <img
+          src={props.cartItems.length === 0 ? emptyCart : fullCart}
+          alt='Shopping cart'
+        ></img>
       </button>
     </div>
   );

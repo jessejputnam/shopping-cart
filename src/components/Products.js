@@ -15,6 +15,8 @@ const allImgs = {
   mandolins: Object.values(allProductsImgs).filter((x) => x.includes("mando"))
 };
 
+console.log(allImgs);
+
 const info = {
   basses: [
     ["Taylor", "5-String Acoustic Bass", 329.99],
@@ -37,6 +39,9 @@ const info = {
 };
 
 const Product = (props) => {
+  const handlePurchaseClick = () => {
+    return props.updateParent(props);
+  };
   const images = allImgs[props.category];
 
   return (
@@ -56,7 +61,9 @@ const Product = (props) => {
           <p className='product__price'>
             ${props.price.toLocaleString("en-US")}
           </p>
-          <button type='button'>Add to Cart</button>
+          <button onClick={handlePurchaseClick} type='button'>
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
@@ -64,11 +71,14 @@ const Product = (props) => {
 };
 
 const ProductPage = (props) => {
+  const updateParent = (value) => props.updateGrandparent(value);
+
   return (
     <div category={props.category} className='ProductPage'>
       <h1>{props.category.toUpperCase()}</h1>
       <div className='product__container'>
         <Product
+          updateParent={updateParent}
           category={props.category}
           num={0}
           company={info[props.category][0][0]}
@@ -76,6 +86,7 @@ const ProductPage = (props) => {
           price={info[props.category][0][2]}
         />
         <Product
+          updateParent={updateParent}
           category={props.category}
           num={1}
           company={info[props.category][1][0]}
@@ -83,6 +94,7 @@ const ProductPage = (props) => {
           price={info[props.category][1][2]}
         />
         <Product
+          updateParent={updateParent}
           category={props.category}
           num={2}
           company={info[props.category][2][0]}
@@ -90,6 +102,7 @@ const ProductPage = (props) => {
           price={info[props.category][2][2]}
         />
         <Product
+          updateParent={updateParent}
           category={props.category}
           num={3}
           company={info[props.category][3][0]}
@@ -101,9 +114,10 @@ const ProductPage = (props) => {
   );
 };
 
-const Products = () => {
+const Products = (props) => {
   const [page, setPage] = useState("guitars");
 
+  const updateGrandparent = (value) => props.updateCart(value);
   const changeTab = (e) => {
     setPage(e.target.id);
   };
@@ -136,7 +150,7 @@ const Products = () => {
           Basses
         </button>
       </div>
-      <ProductPage category={page} />
+      <ProductPage updateGrandparent={updateGrandparent} category={page} />
     </div>
   );
 };
