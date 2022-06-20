@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/shopping-cart/static/css/main.a9e30a4d.css",
-    "main.js": "/shopping-cart/static/js/main.88e39b2a.js",
-    "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
-    "static/media/guitar-splash.jpg": "/shopping-cart/static/media/guitar-splash.4d86f89cfa489cc85b39.jpg",
-    "static/media/mando-fstyle.jpeg": "/shopping-cart/static/media/mando-fstyle.2c0e935fd25de23dcbb8.jpeg",
-    "static/media/bass-cutaway.jpg": "/shopping-cart/static/media/bass-cutaway.3c2b08f01f0e72e67edb.jpg",
-    "static/media/guitar-spanish.jpeg": "/shopping-cart/static/media/guitar-spanish.31d6ae91f1d6bcc876bb.jpeg",
-    "static/media/guitar-lowden.jpeg": "/shopping-cart/static/media/guitar-lowden.2b2ab1c4fa068a866cdc.jpeg",
-    "static/media/guitar-cutaway.jpeg": "/shopping-cart/static/media/guitar-cutaway.0ffc5088b6b1d8ee05ec.jpeg",
-    "static/media/bass-5string.jpg": "/shopping-cart/static/media/bass-5string.8fd35987792011a03a5c.jpg",
-    "static/media/mando-astyle.jpeg": "/shopping-cart/static/media/mando-astyle.5765fbea50b369e6039b.jpeg",
-    "static/media/bass-sunburst.jpeg": "/shopping-cart/static/media/bass-sunburst.b2b7e2e4bd6c132e2fa0.jpeg",
-    "static/media/mando-trinity.jpeg": "/shopping-cart/static/media/mando-trinity.c5bff3a14404dcf9afa2.jpeg",
-    "static/media/guitar-ovation.jpg": "/shopping-cart/static/media/guitar-ovation.828dd60d8e8af5048dc5.jpg",
-    "static/media/bass-acoustic.jpg": "/shopping-cart/static/media/bass-acoustic.f49489bbe15d32067de3.jpg",
-    "static/media/mando-mcneela.jpg": "/shopping-cart/static/media/mando-mcneela.014a6edf82012fce5324.jpg",
-    "index.html": "/shopping-cart/index.html",
-    "static/media/close-icon.svg": "/shopping-cart/static/media/close-icon.d5e5ff10c4ea1565a78cfe00262a054c.svg",
-    "main.a9e30a4d.css.map": "/shopping-cart/static/css/main.a9e30a4d.css.map",
-    "main.88e39b2a.js.map": "/shopping-cart/static/js/main.88e39b2a.js.map",
-    "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
+    "main.css": "/static/css/main.9aef39a6.css",
+    "main.js": "/static/js/main.2f6fce98.js",
+    "static/js/787.d6fe38e8.chunk.js": "/static/js/787.d6fe38e8.chunk.js",
+    "static/media/guitar-splash.jpg": "/static/media/guitar-splash.4d86f89cfa489cc85b39.jpg",
+    "static/media/mando-fstyle.jpeg": "/static/media/mando-fstyle.2c0e935fd25de23dcbb8.jpeg",
+    "static/media/bass-cutaway.jpg": "/static/media/bass-cutaway.3c2b08f01f0e72e67edb.jpg",
+    "static/media/guitar-spanish.jpeg": "/static/media/guitar-spanish.31d6ae91f1d6bcc876bb.jpeg",
+    "static/media/guitar-lowden.jpeg": "/static/media/guitar-lowden.2b2ab1c4fa068a866cdc.jpeg",
+    "static/media/guitar-cutaway.jpeg": "/static/media/guitar-cutaway.0ffc5088b6b1d8ee05ec.jpeg",
+    "static/media/bass-5string.jpg": "/static/media/bass-5string.8fd35987792011a03a5c.jpg",
+    "static/media/mando-astyle.jpeg": "/static/media/mando-astyle.5765fbea50b369e6039b.jpeg",
+    "static/media/bass-sunburst.jpeg": "/static/media/bass-sunburst.b2b7e2e4bd6c132e2fa0.jpeg",
+    "static/media/mando-trinity.jpeg": "/static/media/mando-trinity.c5bff3a14404dcf9afa2.jpeg",
+    "static/media/guitar-ovation.jpg": "/static/media/guitar-ovation.828dd60d8e8af5048dc5.jpg",
+    "static/media/bass-acoustic.jpg": "/static/media/bass-acoustic.f49489bbe15d32067de3.jpg",
+    "static/media/mando-mcneela.jpg": "/static/media/mando-mcneela.014a6edf82012fce5324.jpg",
+    "index.html": "/index.html",
+    "static/media/close-icon.svg": "/static/media/close-icon.d5e5ff10c4ea1565a78cfe00262a054c.svg",
+    "main.9aef39a6.css.map": "/static/css/main.9aef39a6.css.map",
+    "main.2f6fce98.js.map": "/static/js/main.2f6fce98.js.map",
+    "787.d6fe38e8.chunk.js.map": "/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9e30a4d.css",
-    "static/js/main.88e39b2a.js"
+    "static/css/main.9aef39a6.css",
+    "static/js/main.2f6fce98.js"
   ]
 }
