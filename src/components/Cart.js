@@ -22,8 +22,24 @@ const allThumbs = {
 };
 
 const Item = (props) => {
+  const handleDel = (e) => {
+    return props.updateParentDel(
+      e.target.parentElement.parentElement.parentElement.id
+    );
+  };
+  const handleSub = (e) => {
+    return props.updateParentSub(
+      e.target.parentElement.parentElement.parentElement.parentElement.id
+    );
+  };
+  const handleAdd = (e) => {
+    return props.updateParentAdd(
+      e.target.parentElement.parentElement.parentElement.id
+    );
+  };
+
   return (
-    <div className='Item'>
+    <div className='Item' id={props.arrindex}>
       <img src={props.src} alt={props.alt} className='product__thumb'></img>
       <div className='item__info'>
         <div className='item__row--0'>
@@ -34,14 +50,22 @@ const Item = (props) => {
           <p>{props.model}</p>
         </div>
         <div className='item__row--2'>
-          <button type='button' className='btn--del'>
+          <button onClick={handleDel} type='button' className='btn--del'>
             DEL
           </button>
-          <button type='button' className='btn--count btn--remove'>
+          <button
+            onClick={handleSub}
+            type='button'
+            className='btn--count btn--remove'
+          >
             <strong>&ndash;</strong>
           </button>
           <p className='item--count'>{props.count}</p>
-          <button type='button' className='btn--count btn--remove'>
+          <button
+            onClick={handleAdd}
+            type='button'
+            className='btn--count btn--add'
+          >
             +
           </button>
         </div>
@@ -55,6 +79,10 @@ const Cart = (props) => {
     document.querySelector(".Cart").classList.add("Cart--hidden");
   };
 
+  const updateParentDel = (value) => props.updateDel(value);
+  const updateParentSub = (value) => props.updateSub(value);
+  const updateParentAdd = (value) => props.updateAdd(value);
+
   const cartTotal =
     props.cartItems.length === 0
       ? 0
@@ -62,9 +90,13 @@ const Cart = (props) => {
           .map((item) => item.price * item.count)
           .reduce((a, b) => a + b, 0);
 
-  const cartItems = props.cartItems.map((item) => (
+  const cartItems = props.cartItems.map((item, index) => (
     <Item
+      updateParentDel={updateParentDel}
+      updateParentSub={updateParentSub}
+      updateParentAdd={updateParentAdd}
       key={uniqid()}
+      arrindex={index}
       src={allThumbs[item.category][item.index][1]}
       alt={item.model}
       company={item.company}
@@ -82,7 +114,7 @@ const Cart = (props) => {
       <h2>Shopping Cart</h2>
       {cartItems}
       <p className='total__price'>
-        Total: ${cartTotal.toLocaleString("en-US")}
+        Total: <strong>${cartTotal.toLocaleString("en-US")}</strong>
       </p>
       <button className='btn--checkout' type='button'>
         Checkout

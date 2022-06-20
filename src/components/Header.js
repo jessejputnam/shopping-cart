@@ -5,10 +5,8 @@ import emptyCart from "../images/cart-empty.png";
 import fullCart from "../images/cart-full.png";
 
 import "../styles/Header.css";
-import { useState } from "react";
 
 const Header = (props) => {
-  const [itemCount, setItemCount] = useState(0);
   const navigate = useNavigate();
   const goToHome = () => navigate("/");
 

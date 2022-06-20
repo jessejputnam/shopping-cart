@@ -43,6 +43,26 @@ function App() {
     const newCart = updateCartData(cart, value);
     setCart(newCart);
   };
+
+  const updateDel = (value) => {
+    const newCart = cart.slice();
+    newCart.splice(value, 1);
+    setCart(newCart);
+  };
+
+  const updateSub = (value) => {
+    const newCart = cart.slice();
+    if (newCart[value].count < 1.1) return;
+    newCart[value].count--;
+    setCart(newCart);
+  };
+
+  const updateAdd = (value) => {
+    const newCart = cart.slice();
+    newCart[value].count++;
+    setCart(newCart);
+  };
+
   const handleCartBtn = () => {
     document.querySelector(".Cart").classList.toggle("Cart--hidden");
   };
@@ -60,7 +80,12 @@ function App() {
         cartClick={handleCartBtn}
         cartItems={cart}
       />
-      <Cart cartItems={cart} />
+      <Cart
+        updateSub={updateSub}
+        updateAdd={updateAdd}
+        updateDel={updateDel}
+        cartItems={cart}
+      />
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route
