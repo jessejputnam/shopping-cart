@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.a9e30a4d.css",
-    "main.js": "/shopping-cart/static/js/main.b8ef32f6.js",
+    "main.js": "/shopping-cart/static/js/main.88e39b2a.js",
     "static/js/787.d6fe38e8.chunk.js": "/shopping-cart/static/js/787.d6fe38e8.chunk.js",
     "static/media/guitar-splash.jpg": "/shopping-cart/static/media/guitar-splash.4d86f89cfa489cc85b39.jpg",
     "static/media/mando-fstyle.jpeg": "/shopping-cart/static/media/mando-fstyle.2c0e935fd25de23dcbb8.jpeg",
@@ -19,11 +19,11 @@
     "index.html": "/shopping-cart/index.html",
     "static/media/close-icon.svg": "/shopping-cart/static/media/close-icon.d5e5ff10c4ea1565a78cfe00262a054c.svg",
     "main.a9e30a4d.css.map": "/shopping-cart/static/css/main.a9e30a4d.css.map",
-    "main.b8ef32f6.js.map": "/shopping-cart/static/js/main.b8ef32f6.js.map",
+    "main.88e39b2a.js.map": "/shopping-cart/static/js/main.88e39b2a.js.map",
     "787.d6fe38e8.chunk.js.map": "/shopping-cart/static/js/787.d6fe38e8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a9e30a4d.css",
-    "static/js/main.b8ef32f6.js"
+    "static/js/main.88e39b2a.js"
   ]
 }
