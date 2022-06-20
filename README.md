@@ -1,6 +1,6 @@
 # Shopping Cart (React)
 
-A fake website imitating store fronts with shopping carts. **Click the STRING THEORY title in header to access homepage -- bug-to-be-fixed**
+A fake website imitating store fronts with shopping carts. **Click the STRING THEORY title in header to access homepage -- bug-to-be-fixed** *-- see note in [continued development](#continued-development)
 
 ## Table of contents
 
