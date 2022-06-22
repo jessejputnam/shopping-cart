@@ -4,7 +4,7 @@ import "../styles/Home.css";
 const Home = () => {
   const navigate = useNavigate();
 
-  const goToProducts = () => navigate("/products");
+  const goToProducts = () => navigate("/shopping-cart/products");
 
   return (
     <div className='Home'>
