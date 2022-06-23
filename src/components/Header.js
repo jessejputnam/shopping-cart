@@ -8,7 +8,7 @@ import "../styles/Header.css";
 
 const Header = (props) => {
   const navigate = useNavigate();
-  const goToHome = () => navigate("/shopping-cart");
+  const goToHome = () => navigate("/");
 
   return (
     <div className='Header'>

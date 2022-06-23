@@ -5,9 +5,21 @@ import Header from "./Header";
 import Cart from "./Cart";
 import Home from "./Home";
 import Products from "./Products";
+import SignUp from "./SignUp";
+import SignIn from "./SignIn";
 
 import "../styles/App.css";
 
+// ############# FIREBASE #############
+import Firebase from "../Firebase";
+import { getFirestore } from "firebase/firestore/lite";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
+const auth = getAuth(Firebase);
+
+const db = getFirestore(Firebase);
+
+// ################################################################
 const updateCartData = (cart, value) => {
   let isItemInCart = false;
 
@@ -38,6 +50,7 @@ const updateCartData = (cart, value) => {
 function App() {
   const [cart, setCart] = useState([]);
   const [cartCount, setCartCount] = useState(0);
+  const [modal, setModal] = useState("signup");
 
   const updateCart = (value) => {
     const newCart = updateCartData(cart, value);
@@ -67,11 +80,38 @@ function App() {
     document.querySelector(".Cart").classList.toggle("Cart--hidden");
   };
 
+  const changeModalType = (value) => {
+    setModal(value);
+  };
+
+  const getSignUpData = (data) => {
+    console.log(data);
+    const email = data.email;
+    const password = data.password;
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+      });
+  };
+
   useEffect(() => {
     let count = 0;
     cart.forEach((item) => (count += item.count));
     setCartCount(count);
   }, [cart]);
+
+  let modalWindow;
+  if (modal === "signup")
+    modalWindow = (
+      <SignUp modalType={changeModalType} signUpData={getSignUpData} />
+    );
+  if (modal === "signin") modalWindow = <SignIn modalType={changeModalType} />;
+  if (modal === "none") modalWindow = null;
 
   return (
     <div className='App'>
@@ -80,6 +120,8 @@ function App() {
         cartClick={handleCartBtn}
         cartItems={cart}
       />
+      {modalWindow}
+      {/* <SignUp modalType={changeModalType} signUpData={getSignUpData} /> */}
       <Cart
         updateSub={updateSub}
         updateAdd={updateAdd}
@@ -87,9 +129,9 @@ function App() {
         cartItems={cart}
       />
       <Routes>
-        <Route path='/shopping-cart' element={<Home />}></Route>
+        <Route path='/' element={<Home />}></Route>
         <Route
-          path='/shopping-cart/products'
+          path='/products'
           element={<Products updateCart={updateCart} />}
         ></Route>
       </Routes>
