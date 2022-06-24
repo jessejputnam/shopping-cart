@@ -32,6 +32,11 @@ Programming process should include:
 - Focusing on unidirectional data flow (passing information between states and props)
 - Using React Router for page navigation
 
+Firebase branch addendums
+
+- Host site from Firebase
+- Include authentication services from Firebase -- email login.
+
 ### Screenshot
 
 ![](./public/screen-shot.jpg)
