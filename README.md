@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# Shopping Cart (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fake website imitating store fronts with shopping carts. **Click the STRING THEORY title in header to access homepage -- bug-to-be-fixed** *-- see note in [continued development](#continued-development)
 
-## Available Scripts
+## Table of contents
 
-In the project directory, you can run:
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
 
-### `npm start`
+## Overview
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### The challenge
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Users should be able to:
 
-### `npm test`
+- Navigate between landing page and all product pages
+- Open and view shopping cart
+- Add items to shopping cart
+- Increment and decrement items in shopping cart
+- Delete items in shopping cart
+- Calculate shopping cart total
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Programming process should include:
 
-### `npm run build`
+- Using functional React
+- Focusing on unidirectional data flow (passing information between states and props)
+- Using React Router for page navigation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Firebase branch addendums
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Host site from Firebase
+- Include authentication services from Firebase -- email login.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Screenshot
 
-### `npm run eject`
+![](./public/screen-shot.jpg)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Links
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Live Site URL: [Shopping Cart](https://jessejputnam.github.io/shopping-cart/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## My process
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Built with
 
-## Learn More
+- Flexbox
+- Mobile-first workflow
+- JavaScript
+- React.js
+- [Jest](https://jestjs.io/) - Testing framework
+- [Webpack](https://webpack.js.org/) - Module Bundler
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### What I learned
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project started getting me more familiar with the flow and control of data between components. It really solidified that concept that child components listen for events, then pass that event up to the parent with state before the parent changes the state and sends the new data-set down to the child to be rendered.
 
-### Code Splitting
+### Continued development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- I encountered an issue at the very end, while trying to deploy to github. The React Router switching behaves very differently on my local live server than on the hosted server. I could not find a solution that satisfied both scenarios equally. I need to do more research to discover (a) what the issue actually is that is causing the effect of different behavior and (b) what solutions may already exist for it.
