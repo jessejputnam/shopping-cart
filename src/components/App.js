@@ -87,7 +87,7 @@ function App() {
         cartItems={cart}
       />
       <Routes>
-        <Route path='/' element={<Home />}></Route>
+        <Route path='/shopping-cart' element={<Home />}></Route>
         <Route
           path='/products'
           element={<Products updateCart={updateCart} />}
