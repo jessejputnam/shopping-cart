@@ -89,7 +89,7 @@ function App() {
       <Routes>
         <Route path='/shopping-cart' element={<Home />}></Route>
         <Route
-          path='/products'
+          path='shopping-cart/products'
           element={<Products updateCart={updateCart} />}
         ></Route>
       </Routes>
