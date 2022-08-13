@@ -1,6 +1,6 @@
 # Shopping Cart (React)
 
-A fake website imitating store fronts with shopping carts. **Click the STRING THEORY title in header to access homepage -- bug-to-be-fixed** *-- see note in [continued development](#continued-development)
+A fake website imitating store fronts with shopping carts.
 
 ## Table of contents
 
@@ -11,7 +11,6 @@ A fake website imitating store fronts with shopping carts. **Click the STRING TH
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
 
 ## Overview
 
@@ -59,7 +58,3 @@ Firebase branch addendums
 ### What I learned
 
 This project started getting me more familiar with the flow and control of data between components. It really solidified that concept that child components listen for events, then pass that event up to the parent with state before the parent changes the state and sends the new data-set down to the child to be rendered.
-
-### Continued development
-
-- I encountered an issue at the very end, while trying to deploy to github. The React Router switching behaves very differently on my local live server than on the hosted server. I could not find a solution that satisfied both scenarios equally. I need to do more research to discover (a) what the issue actually is that is causing the effect of different behavior and (b) what solutions may already exist for it.
