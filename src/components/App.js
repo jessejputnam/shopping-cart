@@ -5,6 +5,7 @@ import Header from "./Header";
 import Cart from "./Cart";
 import Home from "./Home";
 import Products from "./Products";
+import Update from "./Update";
 
 import "../styles/App.css";
 
@@ -38,10 +39,16 @@ const updateCartData = (cart, value) => {
 function App() {
   const [cart, setCart] = useState([]);
   const [cartCount, setCartCount] = useState(0);
+  const [updated, setUpdated] = useState(false);
 
-  const updateCart = (value) => {
+  const updateCart = async (value) => {
+    setUpdated(true);
+    setTimeout(() => {
+      setUpdated(false);
+    }, 2000);
     const newCart = updateCartData(cart, value);
     setCart(newCart);
+    // setUpdated(false);
   };
 
   const updateDel = (value) => {
@@ -75,6 +82,7 @@ function App() {
 
   return (
     <div className='App'>
+      <Update updated={updated} />
       <Header
         cartCount={cartCount}
         cartClick={handleCartBtn}

@@ -1,0 +1,19 @@
+.Update {
+  position: fixed;
+  background-color: rgba(191, 0, 0, 0.633);
+  z-index: 1000;
+  width: 100%;
+  text-align: center;
+  height: 35px;
+  padding-top: 5px;
+  top: -40px;
+  box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.611);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  transition: top 0.5s;
+}
+
+.visible {
+  top: 0px;
+}

@@ -35,5 +35,6 @@
 @media (hover: hover) {
   .Header > h1:hover {
     color: rgb(238, 161, 161);
+    cursor: pointer;
   }
 }
